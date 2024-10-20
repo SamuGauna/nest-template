@@ -1,11 +1,11 @@
 import { forwardRef, Inject, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { UsersService } from '../users/users.service';
+import { UsersService } from '../modules/users/users.service';
 import { BCRYPT } from '../bcrypt/bcrypt.const';
 import { Bcrypt } from '../bcrypt/bcrypt.provider';
 import { CreateUserResponseDto } from './dto/createUserResponse.dto';
 import { LoginResponseDto } from './dto/loginResponse.dto';
-import { User } from '../users/users.model';
+import { User } from '../modules/users/users.entity';
 import { UserInterface } from '../utils/interface/user.interface';
 
 @Injectable()
@@ -36,8 +36,7 @@ export class AuthService {
   async login(user: User): Promise<LoginResponseDto> {
     const payload = {
       email: user.email,
-      _id: user._id,
-      roles: user.roles,
+      _id: user.id,
     };
 
     return {

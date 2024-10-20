@@ -9,5 +9,6 @@ import { EmailProvider } from './emails.provider';
   controllers: [EmailsController],
   imports: [SendgridModule, MailtrapModule],
   providers: [EmailProvider],
+  exports: [EmailProvider],
 })
 export class EmailsModule {}

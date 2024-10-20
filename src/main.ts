@@ -31,8 +31,8 @@ async function bootstrap() {
   );
 
   const options = new DocumentBuilder()
-    .setTitle(config.get('npm_package_name'))
-    .setDescription('Api destined for template')
+    .setTitle('Bling')
+    .setDescription('Api destined for devs')
     .addTag('Health', 'Helth endpoints')
     .addTag('Emails', 'Emails endpoints')
     .setVersion(config.get('npm_package_version'))

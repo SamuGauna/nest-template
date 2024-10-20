@@ -22,13 +22,13 @@ export class SendgridService implements Emails {
 
     switch (environment) {
       case 'development':
-        name = `[DEV] Equipo Rifa Club`;
+        name = `[DEV] Equipo Bling`;
         break;
       case 'staging':
-        name = `[STG] Equipo Rifa Club`;
+        name = `[STG] Equipo Bling`;
         break;
       default:
-        name = `Equipo Rifa Club`;
+        name = `Equipo Bling`;
     }
 
     const msg = {

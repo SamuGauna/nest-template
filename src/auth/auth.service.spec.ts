@@ -4,9 +4,9 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { BCRYPT } from '../bcrypt/bcrypt.const';
 import { Bcrypt } from '../bcrypt/bcrypt.provider';
-import { UsersService } from '../users/users.service';
+import { UsersService } from '../modules/users/users.service';
 import { Role } from '../utils/enums/role.enum';
-import { User } from '../users/users.model';
+import { User } from '../modules/users/users.entity';
 import { UserInterface } from '../utils/interface/user.interface';
 
 jest.mock('@nestjs/jwt');

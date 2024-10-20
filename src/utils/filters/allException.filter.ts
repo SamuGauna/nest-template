@@ -9,6 +9,7 @@ import { ConfigService } from '@nestjs/config';
 import { Logger } from 'nestjs-pino';
 import * as errorStackParser from 'error-stack-parser';
 import { ErrorResponseDto } from '../dto/error.dto';
+
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
   constructor(private logger: Logger, private config: ConfigService) {}
